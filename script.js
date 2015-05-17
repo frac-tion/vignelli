@@ -1,28 +1,33 @@
 var ID_PREFIX = "#line";
 var BUS_PREFIX = "#bus";
+var random = 0;
 d3.xml('map.svg', "image/svg+xml", ready);
 
 function ready(error, xml) {
   //Adding our svg file to HTML document
   d3.select('body').node().appendChild(xml.documentElement);
-  createBus("3a");
+  d3.select("svg").attr("id", "svg");
+  createBus("3a", 0);
   //should have a timeout
-  createBus("16a");
-  /*setTimeout(function() {
-  createBus("16a");
-  }, 200);
-  */
+  createBus("16a", 100);
+  createBus("16a", 10000);
+  createBus("16b", 500);
+  createBus("3b", 600);
 }
 
-function createBus(line) {
-  var svg = d3.select("svg");
-  console.log(svg);
-  var path = svg.select(ID_PREFIX + line);
-  var bus = svg.select(BUS_PREFIX + line);
-  var startPoint = pathStartPoint(path);
-  bus.attr("transform", "translate(" + startPoint + ")");
+function createBus(line, time) {
+  time = time || 0;
+  setTimeout(function() {
+    var svg = d3.select("svg");
+    console.log(svg);
+    var path = svg.select(ID_PREFIX + line);
+    var newBus = clone(line);
+    console.log("NewBus", newBus);
+    var startPoint = pathStartPoint(path);
+    newBus.attr("transform", "translate(" + startPoint + ")");
 
-  transition(path, bus, line);
+    transition(path, newBus, line);
+  }, time);
 }
 
 //Get path start point for placing marker
@@ -35,7 +40,7 @@ function pathStartPoint(path) {
 
 function transition(path, marker, line) {
   marker.transition()
-    .duration(6000)
+    .duration(10000)
     .attrTween("transform", translateAlong(path.node()))
     .ease("linear")
     .each("end", startTransition(path, marker, line));// infinite loop
@@ -45,11 +50,9 @@ function startTransition(path, marker, line) {
   line = toggleLine(line);
   var svg = d3.select("svg");
   path = svg.select(ID_PREFIX + line);
-  var bus = svg.select(BUS_PREFIX + line);
-  //bus.attr("transform", "translate(" + startPoint + ")");
+  var bus = clone(line);
   return function() {
-    bus.attr("opacity", 100);
-    marker.attr("opacity", 0);
+    marker.remove();
     transition(path, bus, line);
   }
 }
@@ -71,4 +74,11 @@ function toggleLine(line) {
     return (line === "3a")? "3b" : "3a";
   else
     return (line === "16a")? "16b" : "16a";
+}
+
+function clone(id) {
+  var cloned = document.getElementById("bus" + id).cloneNode(true);
+  cloned.id += random++;
+  document.getElementById("layer1").appendChild(cloned);
+  return d3.select("svg").select("#" + cloned.id);
 }
