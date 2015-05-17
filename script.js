@@ -1,5 +1,7 @@
 var ID_PREFIX = "#line";
 var BUS_PREFIX = "#bus";
+var TIME = 15000;
+var SPEED = 0.2;
 var random = 0;
 d3.xml('map_5.svg', "image/svg+xml", ready);
 
@@ -8,15 +10,15 @@ function ready(error, xml) {
   d3.select('body').node().appendChild(xml.documentElement);
   d3.select("svg").attr("id", "svg");
   createBus("3a", 0);
-  //should have a timeout
-  createBus("16a", 100);
-  createBus("16a", 10000);
-  createBus("16b", 500);
-  createBus("3b", 600);
+  createBus("3a", 0.33);
+  createBus("3a", 0.66);
+
+  createBus("16a", 0.25);
+  createBus("16a", 0.75);
 }
 
 function createBus(line, time) {
-  time = time || 0;
+  time = time * TIME || 0;
   setTimeout(function() {
     var svg = d3.select("svg");
     console.log(svg);
@@ -39,8 +41,10 @@ function pathStartPoint(path) {
 }
 
 function transition(path, marker, line) {
+  var l = path[0][0].getTotalLength();
+  console.log("My strange", l);
   marker.transition()
-    .duration(10000)
+    .duration(l / SPEED)
     .attrTween("transform", translateAlong(path.node()))
     .ease("linear")
     .each("end", startTransition(path, marker, line));// infinite loop
