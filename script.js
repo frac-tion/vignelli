@@ -1,6 +1,6 @@
 var ID_PREFIX = "#line";
 var BUS_PREFIX = "#bus";
-var SPEED = 0.01;
+var SPEED = 0.9;
 var TIME = 1500;
 console.log(TIME);
 var random = 0;
