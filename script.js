@@ -1,6 +1,7 @@
 var ID_PREFIX = "#line";
 var BUS_PREFIX = "#bus";
 var SPEED = 0.01;
+var SPEED = 0.5;
 var TIME = 1500;
 console.log(TIME);
 var random = 0;
@@ -19,9 +20,9 @@ function ready(error, xml) {
 }
 
 function createBus(line, time) {
-  time = time * TIME / SPEED || 0;
-  console.log("Time", time / 1000);
-  setTimeout(function() {
+  //time = time * TIME / SPEED || 0;
+  //console.log("Time", time / 1000);
+  //setTimeout(function() {
     var svg = d3.select("svg");
     var path = svg.select(ID_PREFIX + line);
     var newBus = clone(line);
@@ -29,7 +30,7 @@ function createBus(line, time) {
     newBus.attr("transform", "translate(" + startPoint + ")");
 
     transition(path, newBus, line);
-  }, time);
+  //}, time);
 }
 
 //Get path start point for placing marker

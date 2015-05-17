@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.45254834"
-     inkscape:cx="1723.0469"
-     inkscape:cy="582.146"
+     inkscape:zoom="0.90509668"
+     inkscape:cx="542.66853"
+     inkscape:cy="384.41418"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -41,10 +41,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1053"
+     inkscape:window-width="1362"
+     inkscape:window-height="742"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="22"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -93,16 +93,16 @@
        style="fill:none;fill-rule:evenodd;stroke:#ea1616;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#41c01a;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 2320.0001,579.9999 -1499.9997,0 -3e-4,260 -239.9998,0 0,440 -470,0"
+       d="m 110.0003,1279.9999 470,0 0,-440 239.9998,0 3e-4,-260 1499.9997,0"
        id="line16a"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccc" />
     <path
        inkscape:connector-curvature="0"
        id="line16b"
-       d="m 110.0003,1279.9999 309.8232,-0.1768 10e-5,-439.99998 160,0 240.1765,0.17678 3e-4,-260 1499.9997,0"
+       d="m 2320.0001,579.9999 -1499.9997,0 -3e-4,260 -240.1765,-0.17678 -160,0 -10e-5,439.99998 -309.8232,0.1768"
        style="opacity:0.4;fill:none;fill-rule:evenodd;stroke:#41c01a;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccccccc" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ffffff;stroke-width:56;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 240,1319.9999 0,-40"
@@ -1167,7 +1167,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <g
-       id="bus16b"
+       id="bus16a"
        transform="translate(50,-80)">
       <circle
          style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#41c01a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
@@ -1188,7 +1188,7 @@
            y="16.825001">16</tspan></text>
     </g>
     <g
-       id="bus16a"
+       id="bus16b"
        transform="translate(160,-80)">
       <circle
          r="49.999996"
