@@ -7,25 +7,27 @@ function ready(error, xml) {
   //Adding our svg file to HTML document
   d3.select('body').node().appendChild(xml.documentElement);
   d3.select("svg").attr("id", "svg");
-  createBus("3a");
+  createBus("3a", 0);
   //should have a timeout
-  createBus("16a");
-  /*setTimeout(function() {
-    createBus("16a");
-  }, 1000);
-  */
+  createBus("16a", 100);
+  createBus("16a", 10000);
+  createBus("16b", 500);
+  createBus("3b", 600);
 }
 
-function createBus(line) {
-  var svg = d3.select("svg");
-  console.log(svg);
-  var path = svg.select(ID_PREFIX + line);
-  var newBus = clone(line);
-  console.log("NewBus", newBus);
-  var startPoint = pathStartPoint(path);
-  newBus.attr("transform", "translate(" + startPoint + ")");
+function createBus(line, time) {
+  time = time || 0;
+  setTimeout(function() {
+    var svg = d3.select("svg");
+    console.log(svg);
+    var path = svg.select(ID_PREFIX + line);
+    var newBus = clone(line);
+    console.log("NewBus", newBus);
+    var startPoint = pathStartPoint(path);
+    newBus.attr("transform", "translate(" + startPoint + ")");
 
-  transition(path, newBus, line);
+    transition(path, newBus, line);
+  }, time);
 }
 
 //Get path start point for placing marker
