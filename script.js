@@ -1,6 +1,6 @@
 var ID_PREFIX = "#line";
 var BUS_PREFIX = "#bus";
-d3.xml('map_5.svg', "image/svg+xml", ready);
+d3.xml('map.svg', "image/svg+xml", ready);
 
 function ready(error, xml) {
   //Adding our svg file to HTML document
