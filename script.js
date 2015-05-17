@@ -12,13 +12,10 @@ function ready(error, xml) {
   d3.select("svg").attr("id", "svg");
   createBus("3a", 0);
   createBus("3a", 0.33);
-  createBus("3a", 0.66);
 
   createBus("16a", 0.25);
-  createBus("16a", 0.75);
 
   createBus("3b", 0);
-  createBus("3b", 0.33);
   createBus("3b", 0.66);
 
   createBus("16b", 0.25);

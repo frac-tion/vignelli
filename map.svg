@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.45254834"
-     inkscape:cx="1650.1102"
-     inkscape:cy="1062.9868"
+     inkscape:zoom="0.32"
+     inkscape:cx="1383.2997"
+     inkscape:cy="718.40725"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -810,7 +810,7 @@
        id="text12921"
        y="160.00002"
        x="80.000008"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.75px;line-height:110.00000238%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;writing-mode:lr-tb;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.75px;line-height:110.00000238%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:start;writing-mode:lr-tb;text-anchor:start;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;letter-spacing:2px;"
        xml:space="preserve"><tspan
          y="160.00002"
          x="80.000008"
@@ -1306,5 +1306,16 @@
            x="0.31132811"
            y="13.824997">3</tspan></text>
     </g>
+    <text
+       sodipodi:linespacing="110%"
+       id="time-widget"
+       y="1440"
+       x="2410"
+       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.75px;line-height:110.00000238%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;letter-spacing:2px;writing-mode:lr-tb;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       xml:space="preserve"><tspan
+         y="1440"
+         x="2411"
+         id="tspan12923-5"
+         sodipodi:role="line">08:39</tspan></text>
   </g>
 </svg>
