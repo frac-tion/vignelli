@@ -4,6 +4,7 @@ var SPEED = 0.01;
 var TIME = 1500;
 console.log(TIME);
 var random = 0;
+var data = [10, 100, 100];
 d3.xml('map.svg', "image/svg+xml", ready);
 
 function ready(error, xml) {
@@ -16,6 +17,13 @@ function ready(error, xml) {
 
   createBus("16a", 0.25);
   createBus("16a", 0.75);
+
+  createBus("3b", 0);
+  createBus("3b", 0.33);
+  createBus("3b", 0.66);
+
+  createBus("16b", 0.25);
+  createBus("16b", 0.75);
 }
 
 function createBus(line, time) {
