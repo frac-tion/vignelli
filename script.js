@@ -3,7 +3,7 @@ var BUS_PREFIX = "#bus";
 var TIME = 15000;
 var SPEED = 0.2;
 var random = 0;
-d3.xml('map_5.svg', "image/svg+xml", ready);
+d3.xml('map.svg', "image/svg+xml", ready);
 
 function ready(error, xml) {
   //Adding our svg file to HTML document
