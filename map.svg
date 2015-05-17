@@ -1167,7 +1167,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <g
-       id="bus16a"
+       id="bus16b"
        transform="translate(50,-80)">
       <circle
          style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#41c01a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
@@ -1188,7 +1188,7 @@
            y="16.825001">16</tspan></text>
     </g>
     <g
-       id="bus16b"
+       id="bus16a"
        transform="translate(160,-80)">
       <circle
          r="49.999996"
