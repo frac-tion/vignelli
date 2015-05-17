@@ -1,6 +1,8 @@
 var ID_PREFIX = "#line";
 var BUS_PREFIX = "#bus";
 var SPEED = 0.01;
+var TIME = 1500;
+console.log(TIME);
 var random = 0;
 d3.xml('map.svg', "image/svg+xml", ready);
 
@@ -17,7 +19,8 @@ function ready(error, xml) {
 }
 
 function createBus(line, time) {
-  time = time * SPEED || 0;
+  time = time * TIME / SPEED || 0;
+  console.log("Time", time / 1000);
   setTimeout(function() {
     var svg = d3.select("svg");
     var path = svg.select(ID_PREFIX + line);
