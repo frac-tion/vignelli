@@ -1,9 +1,9 @@
 var ID_PREFIX = "#line";
 var BUS_PREFIX = "#bus";
-var SPEED = 0.9;
+var SPEED = 0.01;
 var TIME = 1500;
-console.log(TIME);
 var random = 0;
+
 d3.xml('map.svg', "image/svg+xml", ready);
 
 function ready(error, xml) {
@@ -16,11 +16,17 @@ function ready(error, xml) {
 
   createBus("16a", 0.25);
   createBus("16a", 0.75);
+
+  createBus("3b", 0);
+  createBus("3b", 0.33);
+  createBus("3b", 0.66);
+
+  createBus("16b", 0.25);
+  createBus("16b", 0.75);
 }
 
 function createBus(line, time) {
   time = time * TIME / SPEED || 0;
-  console.log("Time", time / 1000);
   setTimeout(function() {
     var svg = d3.select("svg");
     var path = svg.select(ID_PREFIX + line);
@@ -65,9 +71,7 @@ function translateAlong(path) {
   return function(d, i, a, i2) {
     return function(t) {
      // var change  = Math.random() / 1000;
-     var change = 0;
-      var p = path.getPointAtLength((t + change) * l);
-      console.log(change);
+      var p = path.getPointAtLength(t * l);
       return "translate(" + p.x + "," + p.y + ")";
     };
   };
