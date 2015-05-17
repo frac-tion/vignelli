@@ -44,7 +44,7 @@
      inkscape:window-width="1366"
      inkscape:window-height="741"
      inkscape:window-x="0"
-     inkscape:window-y="339"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:object-paths="true"
      inkscape:snap-intersection-paths="true"
@@ -1306,16 +1306,5 @@
            x="0.31132811"
            y="13.824997">3</tspan></text>
     </g>
-    <text
-       sodipodi:linespacing="110%"
-       id="time-widget"
-       y="1440"
-       x="2410"
-       style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:93.75px;line-height:110.00000238%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-align:center;letter-spacing:2px;writing-mode:lr-tb;text-anchor:middle;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;color-interpolation:sRGB;color-interpolation-filters:linearRGB;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:25;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       xml:space="preserve"><tspan
-         y="1440"
-         x="2411"
-         id="tspan12923-5"
-         sodipodi:role="line">08:39</tspan></text>
   </g>
 </svg>
