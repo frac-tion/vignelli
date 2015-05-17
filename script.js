@@ -1,7 +1,6 @@
 var ID_PREFIX = "#line";
 var BUS_PREFIX = "#bus";
-var TIME = 15000;
-var SPEED = 0.2;
+var SPEED = 0.01;
 var random = 0;
 d3.xml('map.svg', "image/svg+xml", ready);
 
@@ -18,13 +17,11 @@ function ready(error, xml) {
 }
 
 function createBus(line, time) {
-  time = time * TIME || 0;
+  time = time * SPEED || 0;
   setTimeout(function() {
     var svg = d3.select("svg");
-    console.log(svg);
     var path = svg.select(ID_PREFIX + line);
     var newBus = clone(line);
-    console.log("NewBus", newBus);
     var startPoint = pathStartPoint(path);
     newBus.attr("transform", "translate(" + startPoint + ")");
 
@@ -36,15 +33,14 @@ function createBus(line, time) {
 function pathStartPoint(path) {
   var d = path.attr("d");
   var dsplitted = d.split(" ");
-  console.log("d: " + d);
   return dsplitted[1].split(",");
 }
 
 function transition(path, marker, line) {
-  var l = path[0][0].getTotalLength();
-  console.log("My strange", l);
+  var l = path.node().getTotalLength();
   marker.transition()
     .duration(l / SPEED)
+    //.attrTween("transform", translateAlong(path.node()))
     .attrTween("transform", translateAlong(path.node()))
     .ease("linear")
     .each("end", startTransition(path, marker, line));// infinite loop
@@ -63,11 +59,12 @@ function startTransition(path, marker, line) {
 
 function translateAlong(path) {
   var l = path.getTotalLength();
-  return function(d, i, a) {
-    console.log("i", i);
+  return function(d, i, a, i2) {
     return function(t) {
-      //console.log(t);
-      var p = path.getPointAtLength(t*l);
+     // var change  = Math.random() / 1000;
+     var change = 0;
+      var p = path.getPointAtLength((t + change) * l);
+      console.log(change);
       return "translate(" + p.x + "," + p.y + ")";
     };
   };
