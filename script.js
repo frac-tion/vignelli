@@ -29,6 +29,7 @@ function createBus(line, time) {
     var path = svg.select(ID_PREFIX + line);
     var newBus = clone(line);
     var startPoint = pathStartPoint(path);
+    newBus.attr("style", "opacity:1");
     newBus.attr("transform", "translate(" + startPoint + ")");
 
     transition(path, newBus, line);
